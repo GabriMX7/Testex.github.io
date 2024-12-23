@@ -1,21 +1,81 @@
+/* Estilo padrão para telas maiores (desktop e tablets) */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-  max-width: 400px;
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  margin: 50px auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
 }
 
 h1 {
+  font-size: 2.5rem;
   color: #333;
 }
 
-.alert {
-  text-align: center;
+p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Imagem ajustada */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Botão padrão */
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* ======== Estilos para Celulares ======== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ======== Estilos para Celulares Menores ======== */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
 }
