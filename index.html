@@ -3,33 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Entrada de Segurança</title>
+  <title>Entrada Segura</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="security-container">
-    <h1>Área Protegida</h1>
-    <p>Insira a senha para acessar os links:</p>
-    <form id="security-form">
+  <div class="login-container">
+    <h1>Área Restrita</h1>
+    <p>Insira suas credenciais para acessar os links autorizados.</p>
+    <form id="login-form">
+      <label for="username">Usuário:</label>
+      <input type="text" id="username" placeholder="Digite seu usuário" required>
       <label for="password">Senha:</label>
-      <input type="password" id="password" placeholder="Digite a senha" required>
+      <input type="password" id="password" placeholder="Digite sua senha" required>
       <button type="submit">Entrar</button>
     </form>
-    <p id="error-message" style="display: none; color: red; margin-top: 10px;">Senha incorreta. Tente novamente.</p>
+    <p id="error-message" style="display: none; color: red;">Credenciais inválidas. Tente novamente.</p>
   </div>
 
   <script>
-    // Senha de exemplo (não seguro para produção)
-    const senhaCorreta = "seguro123";
+    // Usuário e senha autorizados
+    const authorizedUser = "admin";
+    const authorizedPassword = "12345";
 
-    document.getElementById('security-form').addEventListener('submit', function(event) {
-      event.preventDefault(); // Impede o envio do formulário
-      const senhaDigitada = document.getElementById('password').value;
+    document.getElementById("login-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
 
-      if (senhaDigitada === senhaCorreta) {
-        window.location.href = "links.html"; // Redireciona para a página de links
+      if (username === authorizedUser && password === authorizedPassword) {
+        // Armazena a autorização no localStorage
+        localStorage.setItem("authorized", "true");
+        window.location.href = "links.html"; // Redireciona para os links
       } else {
-        document.getElementById('error-message').style.display = "block"; // Exibe mensagem de erro
+        document.getElementById("error-message").style.display = "block";
       }
     });
   </script>
