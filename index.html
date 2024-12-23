@@ -17,11 +17,11 @@
       <input type="password" id="password" placeholder="Digite sua senha" required>
       <button type="submit">Entrar</button>
     </form>
-    <p id="error-message" style="display: none; color: red;">Credenciais inválidas. Tente novamente.</p>
+    <p id="error-message" style="display: none;">Credenciais inválidas. Tente novamente.</p>
   </div>
 
   <script>
-    // Usuário e senha autorizados
+    // Credenciais autorizadas
     const authorizedUser = "admin";
     const authorizedPassword = "12345";
 
@@ -31,9 +31,9 @@
       const password = document.getElementById("password").value;
 
       if (username === authorizedUser && password === authorizedPassword) {
-        // Armazena a autorização no localStorage
+        // Armazena a autorização
         localStorage.setItem("authorized", "true");
-        window.location.href = "links.html"; // Redireciona para os links
+        window.location.href = "links.html"; // Redireciona para a página de links
       } else {
         document.getElementById("error-message").style.display = "block";
       }
