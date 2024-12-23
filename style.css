@@ -1,67 +1,26 @@
-/* Estilo inspirado no Spotify */
+/* Estilo geral */
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #1db954, #191414);
-  color: #fff;
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  padding: 0;
+  background-color: #f0f0f0;
 }
 
-/* Contêiner de login e links */
-.login-container, .links-container {
-  background-color: rgba(0, 0, 0, 0.8);
+/* Contêiner de login */
+.login-container, .dashboard-container {
+  background-color: #fff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
+  margin: 30px auto;
 }
 
-/* Cabeçalhos */
-h1 {
-  margin-bottom: 20px;
-  font-size: 2rem;
-  color: #1db954;
-}
-
-/* Rótulos e entrada */
-label {
-  display: block;
-  margin: 10px 0 5px;
-}
-
-input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #555;
-  border-radius: 4px;
-  background-color: #222;
-  color: #fff;
-}
-
-/* Botões */
-button {
-  padding: 10px 20px;
-  background-color: #1db954;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-button:hover {
-  background-color: #14833b;
-}
-
-/* Lista de links */
+/* Estilo dos links de vídeo */
 ul {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
 }
 
@@ -71,10 +30,38 @@ li {
 
 a {
   text-decoration: none;
-  color: #1db954;
-  font-weight: bold;
+  color: #007BFF;
 }
 
 a:hover {
-  color: #14833b;
+  text-decoration: underline;
+}
+
+/* Cabeçalho */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Campos de input e botão */
+input, button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#error-message {
+  color: red;
 }
