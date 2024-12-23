@@ -3,20 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Links Disponíveis</title>
+  <title>Links Autorizados</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="links-container">
-    <h1>Bem-vindo à Área Segura</h1>
-    <p>Aqui estão os links disponíveis:</p>
+    <h1>Bem-vindo, usuário autorizado!</h1>
+    <p>Aqui estão os links protegidos:</p>
     <ul>
       <li><a href="https://github.com/seuusuario/projeto1" target="_blank">Projeto 1</a></li>
       <li><a href="https://github.com/seuusuario/projeto2" target="_blank">Projeto 2</a></li>
       <li><a href="https://github.com/seuusuario/projeto3" target="_blank">Projeto 3</a></li>
-      <li><a href="https://seusite.github.io" target="_blank">Página Inicial</a></li>
     </ul>
-    <button onclick="window.location.href='index.html'">Sair</button>
+    <button onclick="logout()">Sair</button>
   </div>
+
+  <script>
+    // Verifica se o usuário está autorizado
+    if (localStorage.getItem("authorized") !== "true") {
+      alert("Acesso não autorizado!");
+      window.location.href = "index.html"; // Redireciona para a página de login
+    }
+
+    // Função para logout
+    function logout() {
+      localStorage.removeItem("authorized");
+      window.location.href = "index.html";
+    }
+  </script>
 </body>
 </html>
