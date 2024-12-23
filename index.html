@@ -8,8 +8,8 @@
 </head>
 <body>
   <div class="security-container">
-    <h1>Área Restrita</h1>
-    <p>Insira a senha para acessar os links.</p>
+    <h1>Área Protegida</h1>
+    <p>Insira a senha para acessar os links:</p>
     <form id="security-form">
       <label for="password">Senha:</label>
       <input type="password" id="password" placeholder="Digite a senha" required>
@@ -19,17 +19,17 @@
   </div>
 
   <script>
-    // Senha de segurança (somente para exemplo; não use isso em produção)
-    const correctPassword = "12345";
+    // Senha de exemplo (não seguro para produção)
+    const senhaCorreta = "seguro123";
 
     document.getElementById('security-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-      const inputPassword = document.getElementById('password').value;
+      event.preventDefault(); // Impede o envio do formulário
+      const senhaDigitada = document.getElementById('password').value;
 
-      if (inputPassword === correctPassword) {
+      if (senhaDigitada === senhaCorreta) {
         window.location.href = "links.html"; // Redireciona para a página de links
       } else {
-        document.getElementById('error-message').style.display = "block";
+        document.getElementById('error-message').style.display = "block"; // Exibe mensagem de erro
       }
     });
   </script>
