@@ -3,120 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <style>
-        /* Basic Styling */
-        body {
-            font-family: sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Header */
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-        }
-
-        h1 {
-            margin: 0;
-        }
-
-        /* Navigation */
-        nav {
-            background-color: #f0f0f0;
-            padding: 1rem;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        nav li {
-            display: inline-block;
-            margin: 0 1rem;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        /* About Section */
-        #about {
-            padding: 2rem;
-            text-align: center;
-        }
-
-        /* Projects Section */
-        #projects {
-            padding: 2rem;
-        }
-
-        .project {
-            margin-bottom: 2rem;
-            border: 1px solid #ccc;
-            padding: 1rem;
-        }
-
-        /* Contact Section */
-        #contact {
-            background-color: #f0f0f0;
-            padding: 2rem;
-            text-align: center;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            nav li {
-                display: block;
-                margin: 0.5rem 0;
-            }
-        }
-    </style>
+    <title>My YouTube Portfolio</title>
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
 
     <header>
-        <h1>My Portfolio</h1>
+        <h1>My YouTube Channel</h1>
+        <img src="channel_logo.png" alt="Channel Logo"> 
     </header>
 
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#videos">Videos</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <section id="about">
         <h2>About Me</h2>
-        <p>This is a simple portfolio website to showcase my skills and projects.</p>
+        <p>I'm a passionate YouTuber creating content on [Your Niche]. 
+            [Insert a brief bio here]</p>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>Description of Project 1</p>
-            <a href="#">View Project</a>
+    <section id="videos">
+        <h2>Featured Videos</h2>
+        <div class="video-container">
+            <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/[Your Video ID 1]" 
+                title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
         </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>Description of Project 2</p>
-            <a href="#">View Project</a>
+        <div class="video-container"> 
+            <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/[Your Video ID 2]" 
+                title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
         </div>
-        </section>
+    </section>
 
     <section id="contact">
         <h2>Contact</h2>
         <p>Email: your_email@example.com</p>
-        <p>Phone: 123-456-7890</p>
+        <p>Social Media:</p>
+        <ul>
+            <li><a href="https://www.instagram.com/[Your_Instagram]" target="_blank">Instagram</a></li>
+            <li><a href="https://www.twitter.com/[Your_Twitter]" target="_blank">Twitter</a></li>
+            <li><a href="https://www.facebook.com/[Your_Facebook]" target="_blank">Facebook</a></li>
+        </ul>
     </section>
+
+    <footer>
+        <p>&copy; [Your Name/Channel Name] 2024</p>
+    </footer>
+
+    <script src="script.js"></script> 
 
 </body>
 </html>
